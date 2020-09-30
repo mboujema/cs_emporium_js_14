@@ -9899,6 +9899,7 @@ h3 {
 }
 body {
   font-family: Poppins;
+  margin: 0%;
 }
 body header .logonav1 h1 {
   font-weight: bold;
@@ -9923,6 +9924,27 @@ body header nav div .navbar-nav div .buttonLogin {
   background-color: #6C757D;
   border: 1px solid black;
   font-size: 80%;
+}
+body section:first-of-type {
+  background-color: #F3F3F3;
+}
+body section:first-of-type .divtest {
+  margin-left: 20%;
+}
+body section:first-of-type .divtest #textsection {
+  margin: 8% 0%;
+}
+body section:first-of-type .divtest #textsection .logoimg {
+  height: 35%;
+}
+body section:first-of-type .divtest #textsection button {
+  padding: 2% 6%;
+  border-radius: 50px;
+  font-size: 80%;
+}
+body section:first-of-type .divtest .imageshirt {
+  width: 30%;
+  height: 50%;
 }
 
 /*# sourceMappingURL=style.css.map */

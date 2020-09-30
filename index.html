@@ -1,55 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./public/css/style.css">
 </head>
+
 <body>
 
     <header>
-        <div class ="logonav1 text-center m-5">
+        <div class="logonav1 text-center m-5">
             <h1>
                 emporium.
             </h1>
         </div>
-        
+
         <nav class=" navbar-expand-lg navbar-light bg-white ">
             <a class="navbar-brand" href="#">emporium</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse d-flex justify-content-center align-items-center" id="navbarNavAltMarkup">
-              <div class="navbar-nav">
-                <a class="nav-link active mx-4" href="#">HOME <span class="sr-only">(current)</span></a>
-                <a class="nav-link active mx-4" href="#">PRODUCT</a>
-                <a class="nav-link active mx-4" href="#">BLOG</a>
-                <a class="nav-link active mx-4" href="#">ELEMENTS</a>
-                <a class="nav-link active mx-4" href="#">ABOUT</a>
-                <a class="nav-link active mx-4" href="#">CONTACT</a>
-                <div id="allbuttonnav">
-                    <button class="buttonWhite bg-white p-2 ">
+            <div class="collapse navbar-collapse d-flex justify-content-center align-items-center"
+                id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link active mx-4" href="#">HOME <span class="sr-only">(current)</span></a>
+                    <a class="nav-link active mx-4" href="#">PRODUCT</a>
+                    <a class="nav-link active mx-4" href="#">BLOG</a>
+                    <a class="nav-link active mx-4" href="#">ELEMENTS</a>
+                    <a class="nav-link active mx-4" href="#">ABOUT</a>
+                    <a class="nav-link active mx-4" href="#">CONTACT</a>
+                    <div id="allbuttonnav">
+                        <button class="buttonWhite bg-white p-2 ">
 
-                    </button>
-                    <button class="buttonBlack  p-2">
+                        </button>
+                        <button class="buttonBlack  p-2">
 
-                    </button>
+                        </button>
+                    </div>
+                    <div>
+                        <button class="buttonLogin text-white p-2 mx-1">
+                            CONNEXION
+                        </button>
+                    </div>
                 </div>
-                <div>
-                    <button class="buttonLogin text-white p-1 mx-1">
-                        CONNEXION
-                    </button>
-                </div>
-              </div>
             </div>
-          </nav>
+        </nav>
 
     </header>
 
-    
+    <section>
+        <div class="divtest d-flex">
+            <div id="textsection">
+                <h1 class="text-danger">
+                    Shop at
+                </h1>
+                <img class="logoimg" src="./public/img/logo.png" alt="">
+                <p class="my-4">
+                    A wonderful serenity has taken possession of my entire soul, like these sweet <br> mornings of spring
+                    which i enjoy with my.
+                </p>
+                <button type="button" class="btn btn-danger">SALE ITEMS</button>
+            </div>
+            <img class="imageshirt" src="./public/img/slider-1.jpg" alt="">
+
+        </div>
+    </section>
 
     <script src="./public/js/main.js"></script>
 </body>
+
 </html>
