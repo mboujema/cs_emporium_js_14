@@ -9925,26 +9925,34 @@ body header nav div .navbar-nav div .buttonLogin {
   border: 1px solid black;
   font-size: 80%;
 }
-body section:first-of-type {
+body section:nth-of-type(1) {
   background-color: #F3F3F3;
 }
-body section:first-of-type .divtest {
+body section:nth-of-type(1) .divtest {
   margin-left: 20%;
 }
-body section:first-of-type .divtest #textsection {
+body section:nth-of-type(1) .divtest #textsection {
   margin: 8% 0%;
 }
-body section:first-of-type .divtest #textsection .logoimg {
+body section:nth-of-type(1) .divtest #textsection .logoimg {
   height: 35%;
 }
-body section:first-of-type .divtest #textsection button {
+body section:nth-of-type(1) .divtest #textsection button {
   padding: 2% 6%;
   border-radius: 50px;
   font-size: 80%;
 }
-body section:first-of-type .divtest .imageshirt {
+body section:nth-of-type(1) .divtest .imageshirt {
   width: 30%;
   height: 50%;
+}
+body section:nth-of-type(2) .container-fluid .row div, body section:nth-of-type(2) .container-sm .row div, body section:nth-of-type(2) .container-md .row div, body section:nth-of-type(2) .container-lg .row div, body section:nth-of-type(2) .container-xl .row div {
+  margin: 5% 1%;
+  height: 240px;
+}
+body section:nth-of-type(2) .container-fluid .row div h1, body section:nth-of-type(2) .container-sm .row div h1, body section:nth-of-type(2) .container-md .row div h1, body section:nth-of-type(2) .container-lg .row div h1, body section:nth-of-type(2) .container-xl .row div h1 {
+  border-bottom: 3px solid white;
+  padding: 3% 12%;
 }
 
 /*# sourceMappingURL=style.css.map */

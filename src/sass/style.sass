@@ -36,7 +36,8 @@ body
 
     
     section
-        &:first-of-type
+        &:nth-of-type(1)
+            
             background-color: #F3F3F3
             .divtest
                 margin-left: 20%
@@ -52,3 +53,15 @@ body
                 .imageshirt
                     width: 30%
                     height: 50%
+
+        &:nth-of-type(2)
+            .container-fluid
+                .row
+                    div
+                        margin: 5% 1%
+                        height: 240px
+                        h1
+                            border-bottom: 3px solid white
+                            padding: 3% 12%
+                        
+                        
