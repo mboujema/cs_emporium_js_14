@@ -9954,5 +9954,13 @@ body section:nth-of-type(2) .container-fluid .row div h1, body section:nth-of-ty
   border-bottom: 3px solid white;
   padding: 3% 12%;
 }
+body section:nth-of-type(4) {
+  background-image: url("../../public/img/cta-bg.jpg");
+  padding: 15%;
+  background-position: center;
+}
+body section:nth-of-type(4) h1 {
+  font-size: 345%;
+}
 
 /*# sourceMappingURL=style.css.map */
