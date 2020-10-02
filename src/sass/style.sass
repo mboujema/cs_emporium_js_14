@@ -7,17 +7,121 @@
 body
     font-family: Poppins
     margin: 0%
+    .connexion
+        margin-left: 15%
+        z-index: 1
+        position: absolute
+        display: none
+        justify-content: center
+        align-items: center
+        border: 1px black solid
+        border-radius: 50px
+        background-color: white
+        .signup
+            border-right: 1px solid grey
+            margin: 0% 0% 0% 0%
+            .signup2
+                text-align: center
+                border-bottom: 1px solid grey
+                margin: 15% -5% 0% -5%
+                button
+                    background-color: white
+                    border: none
+                    font-size: 220%
+                    margin: 0% 0% 3% 0%
+            .input1
+                display: none
+                .input2
+                    display: flex
+                    flex-direction: column
+                    margin: 7% 0%
+                    input
+                        margin: 2% 0%
+                        height: 40px
+                        width: 400px
+                    div
+                        button
+                            margin: 2% 0%
+                            padding: 2% 20%
+                            border-radius: 0
+                
+                .buttondiv
+                    border-top: 1px solid grey
+                    margin: 0% -5% 0% -5%
+                    div
+                        margin: 5% 0% 0% 5%
+                        .btn12
+                            padding: 2% 25%
+                            display: block
+                            flex-direction: column
+                            margin: 0% 0% 3% 0%
+                            border-radius: 10px
+                        .btn13
+                            padding: 2% 23.5%
+                            display: block
+                            flex-direction: column
+                            margin: 0% 0% 3% 0%
+                            border-radius: 10px
+        .croix
+            flex-direction: end
+            display: flex
+            button
+                border: none
+                color: gray
+                background-color: white
+                font-size: 200%
+        .register
+            margin: 0% 0% 0% 0%
+            .register2
+                text-align: center
+                border-bottom: 1px solid grey
+                margin: 15% -5% 0% -5%
+                button
+                    background-color: white
+                    border: none
+                    font-size: 220%
+                    margin: 0% 0% 3% 0%
+            .input3
+                display: none
+                .input4
+                    
+                    margin: 7% 0%
+                    input
+                        margin: 2% 2%
+                        height: 40px
+                        width: 200px
+                    .buginput
+                        width: 418px
+                    
+                    div
+                        button
+                            margin: 2% 0% 33% 2%
+                            padding: 2% 20%
+                            border-radius: 0
+
+
+
     header
         .logonav1
             h1
                 font-weight: bold
         nav
-            .navbar-brand
-                display: none
+            background-color: white
+            padding: 0%
+            z-index: 1000
+            div
+                
+                .navbar-brand
+                    margin: 0% 0% 30% 15%
+                    color: black
+                    font-weight: bolder
+                    font-size: 170%
+                    display: none
             div 
                 .navbar-nav
                     a
                         font-size: 80%
+                        color: black
                     #allbuttonnav
                         
                         .buttonWhite
@@ -34,7 +138,6 @@ body
                             border: 1px solid black
                             font-size: 80%
 
-    
     section
         &:nth-of-type(1)
             
@@ -70,5 +173,50 @@ body
             background-position: center
             h1
                 font-size: 345%
+
+        &:nth-of-type(5)
+            .container
+                .row
+                    flex-wrap: nowrap
+                    .col1
+                        display: none
+            .buttoncar
+                display: flex
+                justify-content: center
+                button
+                    padding: 7px
+                    margin: 20px
+                    border-radius: 100%
+                    border: 1px black solid
+        &:nth-of-type(6)
+            .container-fluid
+                .row
+                    .colgris
+                        background-color: #f3f2f3
+                    .col-4
+                        i
+                            font-size: 220%
+
+    footer
+        .gris
+            background-color: #343A40
+            color: white
+            div
                 
-            
+                div
+                    div
+                        margin: 7% 0%
+                        .h11
+                            margin: 0% 0% 10% 0%
+                        .h12
+                            color: #7b7e81
+                        button
+                            background-color: #343A40
+                            border: #7b7e81 solid 1px
+                            color: #7b7e81
+                            margin: 1%
+        .black
+            background-color: black
+            padding: 1%
+            color: #7b7e81
+
