@@ -16190,6 +16190,39 @@ body section:nth-of-type(2) .container-fluid .row div h1, body section:nth-of-ty
   border-bottom: 3px solid white;
   padding: 3% 12%;
 }
+body section:nth-of-type(3) .container .row .col-4 .divhov {
+  position: relative;
+}
+body section:nth-of-type(3) .container .row .col-4 .divhov:hover::before {
+  position: absolute;
+  bottom: 0;
+  font-family: "Font Awesome 5 Free";
+  content: "" " View Details";
+  color: white;
+  max-width: 50%;
+  background-color: black;
+  animation: divhov 1s;
+  animation-fill-mode: forwards;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body section:nth-of-type(3) .container .row .col-4 .divhov:hover::after {
+  position: absolute;
+  bottom: 0;
+  font-family: "Font Awesome 5 Free";
+  content: "" " Add to cart";
+  font-weight: 550;
+  color: white;
+  max-width: 50%;
+  background-color: red;
+  animation: divhov 1s;
+  animation-fill-mode: forwards;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 50%;
+}
 body section:nth-of-type(4) {
   background-image: url("../../public/img/cta-bg.jpg");
   padding: 15%;
@@ -16198,21 +16231,68 @@ body section:nth-of-type(4) {
 body section:nth-of-type(4) h1 {
   font-size: 345%;
 }
-body section:nth-of-type(5) .container .row {
-  flex-wrap: nowrap;
-}
-body section:nth-of-type(5) .container .row .col1 {
-  display: none;
-}
-body section:nth-of-type(5) .buttoncar {
+body section:nth-of-type(5) .center {
+  align-items: center;
   display: flex;
+  flex-direction: column;
+  height: 100%;
   justify-content: center;
 }
-body section:nth-of-type(5) .buttoncar button {
-  padding: 7px;
-  margin: 20px;
+body section:nth-of-type(5) .center .wrapper {
+  display: flex;
+  grid-gap: 1em;
+  overflow: hidden;
+  width: 74em;
+}
+body section:nth-of-type(5) .center .wrapper .inner {
+  display: flex;
+  grid-gap: 1em;
+  transition: all 1s ease-in-out;
+}
+body section:nth-of-type(5) .center .wrapper .inner .card {
+  border: none;
+}
+body section:nth-of-type(5) .center .wrapper .inner .card img {
+  width: 17.5em;
+}
+body section:nth-of-type(5) .center .wrapper .inner .card .content {
+  padding: 1em;
+  text-align: center;
+}
+body section:nth-of-type(5) .center .wrapper .inner .card div h1 {
+  margin: 0.35em 0;
+  font-size: 1.25rem;
+  line-height: 1;
+}
+body section:nth-of-type(5) .center .wrapper .inner .card div h3 {
+  margin: 0.35em 0;
+  font-size: 1.25rem;
+  line-height: 1;
+}
+body section:nth-of-type(5) .center .map {
+  margin-top: 1em;
+}
+body section:nth-of-type(5) .center .map button {
+  all: unset;
+  border: black 2px solid;
+  cursor: pointer;
+  margin: 0 0.75em;
+  position: relative;
+  user-select: none;
   border-radius: 100%;
-  border: 1px black solid;
+  height: 1em;
+  width: 1em;
+}
+body section:nth-of-type(5) .center .map button:active::after {
+  background: black;
+  content: "";
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  border-radius: 100%;
+  height: 1em;
+  width: 1em;
 }
 body section:nth-of-type(6) .container-fluid .row .colgris, body section:nth-of-type(6) .container-sm .row .colgris, body section:nth-of-type(6) .container-md .row .colgris, body section:nth-of-type(6) .container-lg .row .colgris, body section:nth-of-type(6) .container-xl .row .colgris {
   background-color: #f3f2f3;
@@ -16243,6 +16323,17 @@ body footer .black {
   background-color: black;
   padding: 1%;
   color: #7b7e81;
+}
+
+@keyframes divhov {
+  0% {
+    width: 50%;
+    height: 0%;
+  }
+  100% {
+    width: 50%;
+    height: 30%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

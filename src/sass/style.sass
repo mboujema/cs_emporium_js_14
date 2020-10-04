@@ -3,6 +3,11 @@
 @import "./_fonts.sass"
 @import "./_icons.sass"
 
+@mixin circle($i) 
+    border-radius: 100%
+    height: $i
+    width: $i
+
 
 body
     font-family: Poppins
@@ -166,6 +171,44 @@ body
                         h1
                             border-bottom: 3px solid white
                             padding: 3% 12%
+        
+        &:nth-of-type(3)
+            .container
+                .row
+                    .col-4
+                        .divhov
+                            position: relative
+                            img
+                            &:hover
+                                &::before
+                                    position: absolute
+                                    bottom: 0
+                                    font-family: "Font Awesome 5 Free"
+                                    content: "\f06e" " View Details"
+                                    color: white
+                                    max-width: 50%
+                                    background-color: black
+                                    animation: divhov 1s
+                                    animation-fill-mode: forwards
+                                    display: flex
+                                    align-items: center
+                                    justify-content: center
+                                &::after
+                                    position: absolute
+                                    bottom: 0
+                                    font-family: "Font Awesome 5 Free"
+                                    content: "\f291" " Add to cart"
+                                    font-weight: 550
+                                    color: white
+                                    max-width: 50%
+                                    background-color: red
+                                    animation: divhov 1s
+                                    animation-fill-mode: forwards
+                                    display: flex
+                                    align-items: center
+                                    justify-content: center
+                                    left: 50%
+            
                         
         &:nth-of-type(4)
             background-image: url("../../public/img/cta-bg.jpg")
@@ -175,19 +218,59 @@ body
                 font-size: 345%
 
         &:nth-of-type(5)
-            .container
-                .row
-                    flex-wrap: nowrap
-                    .col1
-                        display: none
-            .buttoncar
+            .center
+                align-items: center
                 display: flex
+                flex-direction: column
+                height: 100%
                 justify-content: center
-                button
-                    padding: 7px
-                    margin: 20px
-                    border-radius: 100%
-                    border: 1px black solid
+                .wrapper 
+                    display: flex
+                    grid-gap: 1em
+                    overflow: hidden
+                    width: 74em
+                    .inner 
+                        display: flex
+                        grid-gap: 1em
+                        transition: all 1s ease-in-out
+                        .card 
+                            border: none
+                            img 
+                                width: 17.5em
+                            .content 
+                                padding: 1em
+                                text-align: center
+                            div
+                                h1
+                                    margin: 0.35em 0
+                                
+                                    font-size: 1.25rem
+                                    line-height: 1
+                                h3
+                                    margin: 0.35em 0
+                                
+                                    font-size: 1.25rem
+                                    line-height: 1
+
+                .map
+                    margin-top: 1em
+                    button
+                        all: unset
+                        border: black 2px solid
+                        cursor: pointer
+                        margin: 0 0.75em
+                        position: relative
+                        user-select: none
+                        @include circle(1em)
+                        &:active
+                            &::after
+                                background: black
+                                content: ""
+                                left: 50%
+                                position: absolute
+                                transform: translate(-50%, -50%)
+                                top: 50%
+                                @include circle(1em)
         &:nth-of-type(6)
             .container-fluid
                 .row
@@ -202,7 +285,7 @@ body
             background-color: #343A40
             color: white
             div
-                
+
                 div
                     div
                         margin: 7% 0%
@@ -220,3 +303,13 @@ body
             padding: 1%
             color: #7b7e81
 
+
+
+
+@keyframes divhov
+    0%
+        width: 50%
+        height: 0%
+    100%
+        width: 50%
+        height: 30%

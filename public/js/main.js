@@ -1,25 +1,26 @@
 // button black website
+
 //btn
 let btnWhite = document.querySelector(".buttonWhite");
 let btnBlack = document.querySelector(".buttonBlack");
 
 //section
-let body = document.querySelector("body")
+let body = document.querySelector("body");
 let headerH1 = document.querySelector("header");
-let logoNav = document.querySelector(".navbar-brand")
+let logoNav = document.querySelector(".navbar-brand");
 let navFond = document.querySelector("nav");
 let navA = document.querySelectorAll("nav>div>div>a");
 let sections = document.querySelectorAll(".sectionBlack");
-let buttonCar = document.querySelectorAll(".buttoncar>button")
+let buttonCar = document.querySelectorAll(".buttoncar>button");
 
 
 //code black button
 
 btnBlack.addEventListener("click", () => {
     body.style.backgroundColor = "black";
-    logoNav.style.color = "white"
-    sections[1].style.color = "white"
-    sections[2].style.color = "white"
+    logoNav.style.color = "white";
+    sections[1].style.color = "white";
+    sections[2].style.color = "white";
     headerH1.style.backgroundColor = "black";
     headerH1.style.color = "white";
     navFond.style.backgroundColor = "black";
@@ -29,15 +30,15 @@ btnBlack.addEventListener("click", () => {
     navA[3].style.color = "white";
     navA[4].style.color = "white";
     navA[5].style.color = "white";
-    buttonCar[0].style.backgroundColor = "black"
-    buttonCar[0].style.border = "white 1px solid"
-    buttonCar[1].style.backgroundColor = "black"
-    buttonCar[1].style.border = "white 1px solid"
-    buttonCar[2].style.backgroundColor = "black"
-    buttonCar[2].style.border = "white 1px solid"
-    buttonCar[3].style.backgroundColor = "black"
-    buttonCar[3].style.border = "white 1px solid"
-    navFond.style.borderBottom = "solid white 2px"
+    buttonCar[0].style.backgroundColor = "black";
+    buttonCar[0].style.border = "white 1px solid";
+    buttonCar[1].style.backgroundColor = "black";
+    buttonCar[1].style.border = "white 1px solid";
+    buttonCar[2].style.backgroundColor = "black";
+    buttonCar[2].style.border = "white 1px solid";
+    buttonCar[3].style.backgroundColor = "black";
+    buttonCar[3].style.border = "white 1px solid";
+    navFond.style.borderBottom = "solid white 2px";
 })
 
 //code white button
@@ -79,9 +80,9 @@ window.addEventListener("scroll", () => {
         navFond.style.height = "12%";
         navFond.style.margin = "0%";
         logoNav.style.display = "block";
-        navFond.style.borderBottom = "solid black 2px"
+        navFond.style.borderBottom = "solid black 2px";
         if (btnWhite) {
-            navFond.style.borderBottom = "solid black 2px"
+            navFond.style.borderBottom = "solid black 2px";
         }
 
     } else {
@@ -127,4 +128,28 @@ window.addEventListener("scroll", () => {
 
 //carrousel
 
-let buttonallcar = document.querySelectorAll(".buttoncar");
+const buttonsWrapper = document.querySelector(".map");
+const slides = document.querySelector(".inner");
+
+buttonsWrapper.addEventListener("click", e => {
+    if (e.target.nodeName === "BUTTON") {
+        Array.from(buttonsWrapper.children).forEach(item =>
+            item.classList.remove("active")
+        );
+        if (e.target.classList.contains("first")) {
+            slides.style.transform = "translateX(-0%)";
+            e.target.classList.add("active");
+        } else if (e.target.classList.contains("second")) {
+            slides.style.transform = "translateX(-14%)";
+            e.target.classList.add("active");
+        } else if (e.target.classList.contains('third')) {
+            slides.style.transform = 'translatex(-28.5%)';
+            e.target.classList.add('active');
+        } else if (e.target.classList.contains('quatrieme')) {
+            slides.style.transform = 'translatex(-42.9%)';
+            e.target.classList.add('active');
+        }
+    }
+});
+
+
