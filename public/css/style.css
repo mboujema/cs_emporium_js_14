@@ -16142,6 +16142,12 @@ body header nav div .navbar-brand {
   font-size: 170%;
   display: none;
 }
+body header nav .navbar-toggler {
+  background-color: black;
+}
+body header nav .navbar-toggler .navbar-toggler-icon {
+  color: white;
+}
 body header nav div .navbar-nav a {
   font-size: 80%;
   color: black;
@@ -16244,6 +16250,16 @@ body section:nth-of-type(5) .center .wrapper {
   overflow: hidden;
   width: 74em;
 }
+@media (min-width: 320px) and (max-width: 600px) {
+  body section:nth-of-type(5) .center .wrapper {
+    width: 17em;
+  }
+}
+@media (min-width: 600px) and (max-width: 1024px) {
+  body section:nth-of-type(5) .center .wrapper {
+    width: 37em;
+  }
+}
 body section:nth-of-type(5) .center .wrapper .inner {
   display: flex;
   grid-gap: 1em;
@@ -16277,11 +16293,16 @@ body section:nth-of-type(5) .center .map button {
   border: black 2px solid;
   cursor: pointer;
   margin: 0 0.75em;
-  position: relative;
-  user-select: none;
   border-radius: 100%;
   height: 1em;
   width: 1em;
+}
+@media (min-width: 320px) and (max-width: 600px) {
+  body section:nth-of-type(5) .center .map button {
+    margin: 0 0.2em;
+    position: relative;
+    user-select: none;
+  }
 }
 body section:nth-of-type(5) .center .map button:active::after {
   background: black;
@@ -16294,10 +16315,44 @@ body section:nth-of-type(5) .center .map button:active::after {
   height: 1em;
   width: 1em;
 }
+body section:nth-of-type(5) .center .map .cinqeme {
+  display: none;
+}
+@media (min-width: 600px) and (max-width: 1024px) {
+  body section:nth-of-type(5) .center .map .cinqeme {
+    display: block;
+  }
+}
+@media (min-width: 600px) and (max-width: 1024px) and (min-width: 320px) and (max-width: 600px) {
+  body section:nth-of-type(5) .center .map .cinqeme {
+    display: block;
+  }
+}
+body section:nth-of-type(5) .center .map .sixieme {
+  display: none;
+}
+@media (min-width: 600px) and (max-width: 1024px) {
+  body section:nth-of-type(5) .center .map .sixieme {
+    display: block;
+  }
+}
+@media (min-width: 600px) and (max-width: 1024px) and (min-width: 320px) and (max-width: 600px) {
+  body section:nth-of-type(5) .center .map .sixieme {
+    display: block;
+  }
+}
+body section:nth-of-type(5) .center .map .sept {
+  display: none;
+}
+@media (min-width: 320px) and (max-width: 600px) {
+  body section:nth-of-type(5) .center .map .sept {
+    display: block;
+  }
+}
 body section:nth-of-type(6) .container-fluid .row .colgris, body section:nth-of-type(6) .container-sm .row .colgris, body section:nth-of-type(6) .container-md .row .colgris, body section:nth-of-type(6) .container-lg .row .colgris, body section:nth-of-type(6) .container-xl .row .colgris {
   background-color: #f3f2f3;
 }
-body section:nth-of-type(6) .container-fluid .row .col-4 i, body section:nth-of-type(6) .container-sm .row .col-4 i, body section:nth-of-type(6) .container-md .row .col-4 i, body section:nth-of-type(6) .container-lg .row .col-4 i, body section:nth-of-type(6) .container-xl .row .col-4 i {
+body section:nth-of-type(6) .container-fluid .row .col-12 i, body section:nth-of-type(6) .container-sm .row .col-12 i, body section:nth-of-type(6) .container-md .row .col-12 i, body section:nth-of-type(6) .container-lg .row .col-12 i, body section:nth-of-type(6) .container-xl .row .col-12 i {
   font-size: 220%;
 }
 body footer .gris {
@@ -16333,6 +16388,45 @@ body footer .black {
   100% {
     width: 50%;
     height: 30%;
+  }
+}
+@media (min-width: 600px) and (max-width: 1024px) {
+  section:nth-of-type(1) .divtest {
+    flex-direction: column;
+    text-align: center;
+  }
+  section:nth-of-type(1) .divtest .imageshirt {
+    margin-left: 35%;
+  }
+  section:nth-of-type(2) .container-fluid .row, section:nth-of-type(2) .container-sm .row, section:nth-of-type(2) .container-md .row, section:nth-of-type(2) .container-lg .row, section:nth-of-type(2) .container-xl .row {
+    flex-direction: column;
+  }
+  section:nth-of-type(2) .container-fluid .row .col, section:nth-of-type(2) .container-sm .row .col, section:nth-of-type(2) .container-md .row .col, section:nth-of-type(2) .container-lg .row .col, section:nth-of-type(2) .container-xl .row .col {
+    padding: 15%;
+  }
+
+  .connexion {
+    margin-right: 30%;
+  }
+}
+@media (min-width: 320px) and (max-width: 600px) {
+  section:nth-of-type(1) .divtest {
+    margin-right: 15%;
+    flex-direction: column;
+    text-align: center;
+  }
+  section:nth-of-type(1) .divtest .imageshirt {
+    margin-left: 35%;
+  }
+  section:nth-of-type(2) .container-fluid .row, section:nth-of-type(2) .container-sm .row, section:nth-of-type(2) .container-md .row, section:nth-of-type(2) .container-lg .row, section:nth-of-type(2) .container-xl .row {
+    flex-direction: column;
+  }
+  section:nth-of-type(2) .container-fluid .row .col, section:nth-of-type(2) .container-sm .row .col, section:nth-of-type(2) .container-md .row .col, section:nth-of-type(2) .container-lg .row .col, section:nth-of-type(2) .container-xl .row .col {
+    padding: 15%;
+  }
+
+  .connexion {
+    flex-direction: column;
   }
 }
 

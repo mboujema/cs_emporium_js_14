@@ -10,10 +10,13 @@ let headerH1 = document.querySelector("header");
 let logoNav = document.querySelector(".navbar-brand");
 let navFond = document.querySelector("nav");
 let navA = document.querySelectorAll("nav>div>div>a");
+let navCol = document.querySelector(".collapse");
+let navCol2 = document.querySelector(".navbar-nav")
 let sections = document.querySelectorAll(".sectionBlack");
-let buttonCar = document.querySelectorAll(".buttoncar>button");
-
-
+let buttonCar = document.querySelectorAll(".map>button");
+let buttonCol = document.querySelector("nav>.navbar-toggler");
+let pcar = document.querySelectorAll(".card")
+console.log(pcar);
 //code black button
 
 btnBlack.addEventListener("click", () => {
@@ -39,6 +42,15 @@ btnBlack.addEventListener("click", () => {
     buttonCar[3].style.backgroundColor = "black";
     buttonCar[3].style.border = "white 1px solid";
     navFond.style.borderBottom = "solid white 2px";
+    pcar[0].style.backgroundColor = "black";
+    pcar[1].style.backgroundColor = "black";
+    pcar[2].style.backgroundColor = "black";
+    pcar[3].style.backgroundColor = "black";
+    pcar[4].style.backgroundColor = "black";
+    pcar[5].style.backgroundColor = "black";
+    pcar[6].style.backgroundColor = "black";
+    pcar[7].style.backgroundColor = "black";
+
 })
 
 //code white button
@@ -66,8 +78,25 @@ btnWhite.addEventListener("click", () => {
     buttonCar[3].style.backgroundColor = "white"
     buttonCar[3].style.border = "black 1px solid"
     navFond.style.borderBottom = "solid black 2px"
-
+    pcar[0].style.backgroundColor = "white";
+    pcar[1].style.backgroundColor = "white";
+    pcar[2].style.backgroundColor = "white";
+    pcar[3].style.backgroundColor = "white";
+    pcar[4].style.backgroundColor = "white";
+    pcar[5].style.backgroundColor = "white";
+    pcar[6].style.backgroundColor = "white";
+    pcar[7].style.backgroundColor = "white";
 })
+
+//nav collapse button
+buttonCol.addEventListener("click", () => {
+    if (navCol2.style.display === "none") {
+        navCol2.style.display = "block"
+    } else {
+        navCol2.style.display = "none"
+    }
+})
+
 
 //navbar scroll change
 let navOffsetTop = navFond.offsetTop;
@@ -81,6 +110,7 @@ window.addEventListener("scroll", () => {
         navFond.style.margin = "0%";
         logoNav.style.display = "block";
         navFond.style.borderBottom = "solid black 2px";
+
         if (btnWhite) {
             navFond.style.borderBottom = "solid black 2px";
         }
@@ -91,6 +121,7 @@ window.addEventListener("scroll", () => {
         navFond.style.borderBottom = "none"
     }
 })
+
 
 //button connexion
 let btnCo = document.querySelector(".buttonLogin")
@@ -148,7 +179,16 @@ buttonsWrapper.addEventListener("click", e => {
         } else if (e.target.classList.contains('quatrieme')) {
             slides.style.transform = 'translatex(-42.9%)';
             e.target.classList.add('active');
-        }
+        } else if (e.target.classList.contains('cinqeme')) {
+            slides.style.transform = 'translatex(-57.9%)';
+            e.target.classList.add('active');
+        } else if (e.target.classList.contains('sixieme')) {
+            slides.style.transform = 'translatex(-71.9%)';
+            e.target.classList.add('active');
+        } else if (e.target.classList.contains('sept')) {
+            slides.style.transform = 'translatex(-86.9%)';
+            e.target.classList.add('active');
+        } 
     }
 });
 

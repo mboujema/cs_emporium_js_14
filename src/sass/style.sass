@@ -3,11 +3,10 @@
 @import "./_fonts.sass"
 @import "./_icons.sass"
 
-@mixin circle($i) 
+@mixin circle($i)
     border-radius: 100%
     height: $i
     width: $i
-
 
 body
     font-family: Poppins
@@ -49,7 +48,7 @@ body
                             margin: 2% 0%
                             padding: 2% 20%
                             border-radius: 0
-                
+
                 .buttondiv
                     border-top: 1px solid grey
                     margin: 0% -5% 0% -5%
@@ -89,7 +88,7 @@ body
             .input3
                 display: none
                 .input4
-                    
+
                     margin: 7% 0%
                     input
                         margin: 2% 2%
@@ -97,14 +96,12 @@ body
                         width: 200px
                     .buginput
                         width: 418px
-                    
+
                     div
                         button
                             margin: 2% 0% 33% 2%
                             padding: 2% 20%
                             border-radius: 0
-
-
 
     header
         .logonav1
@@ -115,20 +112,25 @@ body
             padding: 0%
             z-index: 1000
             div
-                
+
                 .navbar-brand
                     margin: 0% 0% 30% 15%
                     color: black
                     font-weight: bolder
                     font-size: 170%
                     display: none
-            div 
+            .navbar-toggler
+                background-color: black
+                .navbar-toggler-icon
+                    color: white
+
+            div
                 .navbar-nav
                     a
                         font-size: 80%
                         color: black
                     #allbuttonnav
-                        
+
                         .buttonWhite
                             border: 1px solid grey
                             border-radius: 20%
@@ -145,7 +147,7 @@ body
 
     section
         &:nth-of-type(1)
-            
+
             background-color: #F3F3F3
             .divtest
                 margin-left: 20%
@@ -171,7 +173,7 @@ body
                         h1
                             border-bottom: 3px solid white
                             padding: 3% 12%
-        
+
         &:nth-of-type(3)
             .container
                 .row
@@ -208,8 +210,7 @@ body
                                     align-items: center
                                     justify-content: center
                                     left: 50%
-            
-                        
+
         &:nth-of-type(4)
             background-image: url("../../public/img/cta-bg.jpg")
             padding: 15%
@@ -224,31 +225,35 @@ body
                 flex-direction: column
                 height: 100%
                 justify-content: center
-                .wrapper 
+                .wrapper
                     display: flex
                     grid-gap: 1em
                     overflow: hidden
                     width: 74em
-                    .inner 
+                    @media (min-width: 320px) and (max-width: 600px) //phone
+                        width: 17em
+                    @media (min-width: 600px) and (max-width: 1024px) //tablette
+                        width: 37em
+                    .inner
                         display: flex
                         grid-gap: 1em
                         transition: all 1s ease-in-out
-                        .card 
+                        .card
                             border: none
-                            img 
+                            img
                                 width: 17.5em
-                            .content 
+                            .content
                                 padding: 1em
                                 text-align: center
                             div
                                 h1
                                     margin: 0.35em 0
-                                
+
                                     font-size: 1.25rem
                                     line-height: 1
                                 h3
                                     margin: 0.35em 0
-                                
+
                                     font-size: 1.25rem
                                     line-height: 1
 
@@ -259,8 +264,10 @@ body
                         border: black 2px solid
                         cursor: pointer
                         margin: 0 0.75em
-                        position: relative
-                        user-select: none
+                        @media (min-width: 320px) and (max-width: 600px) //phone
+                            margin: 0 0.20em
+                            position: relative
+                            user-select: none
                         @include circle(1em)
                         &:active
                             &::after
@@ -271,12 +278,30 @@ body
                                 transform: translate(-50%, -50%)
                                 top: 50%
                                 @include circle(1em)
+                    .cinqeme
+                        display: none
+                        @media (min-width: 600px) and (max-width: 1024px) //tablette
+                            display: block
+                            @media (min-width: 320px) and (max-width: 600px) //phone
+                                display: block
+                    .sixieme
+                        display: none
+                        @media (min-width: 600px) and (max-width: 1024px) //tablette
+                            display: block
+                            @media (min-width: 320px) and (max-width: 600px) //phone
+                                display: block
+                    .sept
+                        display: none
+
+                        @media (min-width: 320px) and (max-width: 600px) //phone
+                            display: block
+
         &:nth-of-type(6)
             .container-fluid
                 .row
                     .colgris
                         background-color: #f3f2f3
-                    .col-4
+                    .col-12
                         i
                             font-size: 220%
 
@@ -303,9 +328,6 @@ body
             padding: 1%
             color: #7b7e81
 
-
-
-
 @keyframes divhov
     0%
         width: 50%
@@ -313,3 +335,42 @@ body
     100%
         width: 50%
         height: 30%
+
+// mediaquerry
+
+@media (min-width: 600px) and (max-width: 1024px) //tablette
+    section
+        &:nth-of-type(1)
+            .divtest
+                flex-direction: column
+                text-align: center
+                .imageshirt
+                    margin-left: 35%
+        &:nth-of-type(2)
+            .container-fluid
+                .row
+                    flex-direction: column
+                    .col
+                        padding: 15%
+
+    .connexion
+        margin-right: 30%
+
+@media (min-width: 320px) and (max-width: 600px) //phone
+    section
+        &:nth-of-type(1)
+            .divtest
+                margin-right: 15%
+                flex-direction: column
+                text-align: center
+                .imageshirt
+                    margin-left: 35%
+        &:nth-of-type(2)
+            .container-fluid
+                .row
+                    flex-direction: column
+                    .col
+                        padding: 15%
+
+    .connexion
+        flex-direction: column
